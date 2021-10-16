@@ -1,0 +1,100 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin url="https://github.com/bigsy/ednjson">
+    <name>EDN-JSON Converter</name>
+    <version>0.0.1</version>
+    <vendor email="bill.hedworth@gmail.com">Maintained by: Bill Hedworth</vendor>
+    <idea-version since-build="203.000"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <!--suppress PluginXmlValidity -->
+    <depends optional="true">com.intellij.modules.java</depends>
+    <!--suppress PluginXmlValidity -->
+    <depends optional="true">com.intellij.properties</depends>
+
+
+    <actions>
+
+
+
+        <group id="EdnJson.Group.Main" text="EdnJson Converter"
+               description="Group of EdnJson Converter"
+               popup="true"
+               icon="/bigsy/intellij/ednjson/icons/json.png"
+        >
+            <add-to-group group-id="EditMenu" anchor="last"/>
+
+            <group text="Escape/Unescape..."
+                   description="Group of EdnJson Converter escape actions"
+                   popup="true">
+                <action id="bigsy.intellij.ednjson.EdnToJson"
+                        class="bigsy.intellij.ednjson.escaping.EdnToJson"
+                        text="Edn To Json">
+                </action>
+                <action id="bigsy.intellij.ednjson.UnescapeJavaAction"
+                        class="bigsy.intellij.ednjson.escaping.JsonToEdn"
+                        text="Json To Edn"
+                        description="org.apache.commons.text.StringEscapeUtils#unescapeJava">
+                </action>
+                <separator/>
+
+                <action id="bigsy.intellij.ednjson.EscapeJsonAction"
+                        class="bigsy.intellij.ednjson.escaping.EscapeJsonAction"
+                        text="Escape JSON"
+                        description="org.apache.commons.text.StringEscapeUtils#escapeJson">
+                </action>
+                <action id="bigsy.intellij.ednjson.UnescapeJsonAction"
+                        class="bigsy.intellij.ednjson.escaping.UnescapeJsonAction"
+                        text="Unescape JSON"
+                        description="org.apache.commons.text.StringEscapeUtils#unescapeJson">
+                </action>
+                <separator/>
+
+            </group>
+
+            <group text="Encode/Decode..."
+                   description="Group of EdnJson Converter encode/decode actions"
+                   popup="true">
+                <action id="bigsy.intellij.ednjson.EncodeMd5HexAction"
+                        class="bigsy.intellij.ednjson.encoding.EncodeMd5HexAction"
+                        text="Encode to MD5 Hex"
+                        description="Encode to MD5 Hex">
+                </action>
+                <action id="bigsy.intellij.ednjson.EncodeSha1HexAction"
+                        class="bigsy.intellij.ednjson.encoding.EncodeSha1HexAction"
+                        text="Encode to SHA-1 Hex"
+                        description="Encode to SHA-1 Hex">
+                </action>
+            </group>
+
+            <separator/>
+
+
+        </group>
+
+
+        <group id="EdnJson.EditorPopupMenu" text="EdnJson Converter"
+               description="EdnJson Converter plugin"
+               popup="false"
+               icon="/bigsy/intellij/ednjson/icons/edit.svg">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorToggleColumnMode"/>
+
+            <separator/>
+            <reference ref="EdnJson.Group.Main"></reference>
+        </group>
+
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="bigsy.intellij.ednjson.MyApplicationService"/>
+
+        <customizableActionGroupProvider
+                implementation="bigsy.intellij.ednjson.MyCustomizableActionGroupProvider" order="first"/>
+
+
+    </extensions>
+
+
+
+
+</idea-plugin>
+

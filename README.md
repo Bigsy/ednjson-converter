@@ -1,0 +1,1 @@
+Intellij plugin for converting edn to json and back
