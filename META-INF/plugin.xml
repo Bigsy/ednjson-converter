@@ -23,48 +23,15 @@
         >
             <add-to-group group-id="EditMenu" anchor="last"/>
 
-            <group text="Escape/Unescape..."
-                   description="Group of EdnJson Converter escape actions"
-                   popup="true">
-                <action id="bigsy.intellij.ednjson.EdnToJson"
-                        class="bigsy.intellij.ednjson.escaping.EdnToJson"
-                        text="Edn To Json">
-                </action>
-                <action id="bigsy.intellij.ednjson.UnescapeJavaAction"
-                        class="bigsy.intellij.ednjson.escaping.JsonToEdn"
-                        text="Json To Edn"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeJava">
-                </action>
-                <separator/>
+            <action id="bigsy.intellij.ednjson.EdnToJson"
+                    class="bigsy.intellij.ednjson.escaping.EdnToJson"
+                    text="Edn To Json">
+            </action>
+            <action id="bigsy.intellij.ednjson.UnescapeJavaAction"
+                    class="bigsy.intellij.ednjson.escaping.JsonToEdn"
+                    text="Json To Edn">
+            </action>
 
-                <action id="bigsy.intellij.ednjson.EscapeJsonAction"
-                        class="bigsy.intellij.ednjson.escaping.EscapeJsonAction"
-                        text="Escape JSON"
-                        description="org.apache.commons.text.StringEscapeUtils#escapeJson">
-                </action>
-                <action id="bigsy.intellij.ednjson.UnescapeJsonAction"
-                        class="bigsy.intellij.ednjson.escaping.UnescapeJsonAction"
-                        text="Unescape JSON"
-                        description="org.apache.commons.text.StringEscapeUtils#unescapeJson">
-                </action>
-                <separator/>
-
-            </group>
-
-            <group text="Encode/Decode..."
-                   description="Group of EdnJson Converter encode/decode actions"
-                   popup="true">
-                <action id="bigsy.intellij.ednjson.EncodeMd5HexAction"
-                        class="bigsy.intellij.ednjson.encoding.EncodeMd5HexAction"
-                        text="Encode to MD5 Hex"
-                        description="Encode to MD5 Hex">
-                </action>
-                <action id="bigsy.intellij.ednjson.EncodeSha1HexAction"
-                        class="bigsy.intellij.ednjson.encoding.EncodeSha1HexAction"
-                        text="Encode to SHA-1 Hex"
-                        description="Encode to SHA-1 Hex">
-                </action>
-            </group>
 
             <separator/>
 

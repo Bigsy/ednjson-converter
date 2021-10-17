@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <module name="ednjson-converter" />
+    <option name="VM_PARAMETERS" value="-Xmx1024m -Xms256m -ea -Didea.is.internal=true" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <alternative-path path="IntelliJ IDEA IU-212.5080.55" alternative-path-enabled="true" />
+    <predefined_log_file enabled="true" id="idea.log" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
