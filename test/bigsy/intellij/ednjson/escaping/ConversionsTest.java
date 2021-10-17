@@ -25,8 +25,5 @@ public class ConversionsTest {
 		JsonToEdn action = new JsonToEdn();
 		assertEquals("{:foo \"bar\", :baz {:eggplant [1 2 3]}}", action.transformByLine("{\"foo\":\"bar\",\"baz\":{\"eggplant\":[1,2,3]}}"));
 
-
 	}
-
-
 }
