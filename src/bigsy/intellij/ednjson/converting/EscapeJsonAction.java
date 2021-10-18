@@ -1,4 +1,4 @@
-package bigsy.intellij.ednjson.escaping;
+package bigsy.intellij.ednjson.converting;
 
 import bigsy.intellij.ednjson.AbstractEdnJsonAction;
 

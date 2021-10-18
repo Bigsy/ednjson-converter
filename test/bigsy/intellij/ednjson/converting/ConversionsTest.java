@@ -1,4 +1,4 @@
-package bigsy.intellij.ednjson.escaping;
+package bigsy.intellij.ednjson.converting;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

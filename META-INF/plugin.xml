@@ -4,6 +4,7 @@
     <version>0.0.1</version>
     <vendor email="bill.hedworth@gmail.com">Maintained by: Bill Hedworth</vendor>
     <idea-version since-build="203.000"/>
+    <description>Converts clojure Edn to Json and back</description>
 
     <depends>com.intellij.modules.platform</depends>
     <!--suppress PluginXmlValidity -->
@@ -24,11 +25,13 @@
             <add-to-group group-id="EditMenu" anchor="last"/>
 
             <action id="bigsy.intellij.ednjson.EdnToJson"
-                    class="bigsy.intellij.ednjson.escaping.EdnToJson"
+                    class="bigsy.intellij.ednjson.converting.EdnToJson"
+                    description="Popup Switch Case Edn Json..."
                     text="Edn To Json">
             </action>
-            <action id="bigsy.intellij.ednjson.UnescapeJavaAction"
-                    class="bigsy.intellij.ednjson.escaping.JsonToEdn"
+            <action id="bigsy.intellij.ednjson.JsonToEdn"
+                    class="bigsy.intellij.ednjson.converting.JsonToEdn"
+                    description="Popup Switch Case Json Edn..."
                     text="Json To Edn">
             </action>
 
