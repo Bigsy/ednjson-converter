@@ -7,6 +7,8 @@ import java.util.Map;
 
 import clojure.java.api.Clojure;
 import clojure.lang.IFn;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.editor.Editor;
 
 
 public class EdnToJson extends AbstractEdnJsonAction<Object> {
@@ -25,9 +27,17 @@ public class EdnToJson extends AbstractEdnJsonAction<Object> {
 		return ednjson_impl.invoke(string).toString();
 	}
 
+
+	@Override
+	protected String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, Object additionalParam) {
+		return ednjson(selectedText);
+
+	}
+
+
 	@Override
 	public String transformByLine(Map<String, Object> actionContext, String s) {
-		//return org.apache.commons.text.StringEscapeUtils.escapeJava(service("wibble"));
-		return ednjson(s);
-    }
+		throw new RuntimeException();
+	}
+
 }

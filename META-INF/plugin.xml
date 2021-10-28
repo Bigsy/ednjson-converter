@@ -1,7 +1,7 @@
 <!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
 <idea-plugin url="https://github.com/Bigsy/ednjson-converter">
     <name>EDN-JSON Converter</name>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <vendor email="bill.hedworth@gmail.com">Maintained by: Bill Hedworth</vendor>
     <idea-version since-build="203.000"/>
     <description><![CDATA[

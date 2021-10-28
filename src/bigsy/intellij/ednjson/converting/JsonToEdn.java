@@ -5,6 +5,8 @@ import bigsy.intellij.ednjson.AbstractEdnJsonAction;
 import java.util.Map;
 import clojure.java.api.Clojure;
 import clojure.lang.IFn;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.editor.Editor;
 
 public class JsonToEdn extends AbstractEdnJsonAction<Object> {
 
@@ -20,9 +22,15 @@ public class JsonToEdn extends AbstractEdnJsonAction<Object> {
 		return jsonedn_impl.invoke(string).toString();
 	}
 
+
+	@Override
+	protected String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, Object additionalParam) {
+		return jsonedn(selectedText);
+	}
+
+
 	@Override
 	public String transformByLine(Map<String, Object> actionContext, String s) {
-
-		return jsonedn(s);
-    }
+		throw new RuntimeException();
+	}
 }
