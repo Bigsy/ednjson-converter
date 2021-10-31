@@ -79,7 +79,7 @@ public abstract class AbstractEdnJsonAction<T> extends MyEditorAction {
 	}
 
 
-	protected String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, T additionalParam) {
+	public String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, T additionalParam) {
 		String[] textParts = selectedText.split("\n");
 
 		for (int i = 0; i < textParts.length; i++) {

@@ -1,22 +1,22 @@
 package bigsy.intellij.ednjson.converting;
 
 import bigsy.intellij.ednjson.AbstractEdnJsonAction;
-
-import java.util.Map;
 import clojure.java.api.Clojure;
 import clojure.lang.IFn;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.editor.Editor;
 
-public class JsonToEdn extends AbstractEdnJsonAction<Object> {
+import java.util.Map;
+
+public class JsonToEdnPretty extends AbstractEdnJsonAction<Object> {
 
 	static {
-		Thread.currentThread().setContextClassLoader(JsonToEdn.class.getClassLoader());
+		Thread.currentThread().setContextClassLoader(JsonToEdnPretty.class.getClassLoader());
 		IFn require = Clojure.var("clojure.core", "require");
 		require.invoke(Clojure.read("com.bigsy.convert"));
 	}
 
-	private static final  IFn jsonedn_impl= Clojure.var("com.bigsy.convert", "json->edn");
+	private static final  IFn jsonedn_impl= Clojure.var("com.bigsy.convert", "json->edn-pretty");
 
 	public String jsonedn(String string){
 		return jsonedn_impl.invoke(string).toString();

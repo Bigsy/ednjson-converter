@@ -1,7 +1,7 @@
 <!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
 <idea-plugin url="https://github.com/Bigsy/ednjson-converter">
     <name>EDN-JSON Converter</name>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <vendor email="bill.hedworth@gmail.com">Maintained by: Bill Hedworth</vendor>
     <idea-version since-build="203.000"/>
     <description><![CDATA[
@@ -27,17 +27,28 @@
 
             <action id="bigsy.intellij.ednjson.EdnToJson"
                     class="bigsy.intellij.ednjson.converting.EdnToJson"
-                    description="Popup Switch Case Edn Json..."
+                    description="Popup Edn To Json..."
                     text="Edn To Json">
             </action>
             <action id="bigsy.intellij.ednjson.JsonToEdn"
                     class="bigsy.intellij.ednjson.converting.JsonToEdn"
-                    description="Popup Switch Case Json Edn..."
+                    description="Popup Json To Edn..."
                     text="Json To Edn">
             </action>
 
 
             <separator/>
+
+            <action id="bigsy.intellij.ednjson.EdnToJsonPretty"
+                    class="bigsy.intellij.ednjson.converting.EdnToJsonPretty"
+                    description="Popup Edn To Json Pretty..."
+                    text="Edn To Json Pretty">
+            </action>
+            <action id="bigsy.intellij.ednjson.JsonToEdnPretty"
+                    class="bigsy.intellij.ednjson.converting.JsonToEdnPretty"
+                    description="Popup Json To Edn Pretty..."
+                    text="Json To Edn Pretty">
+            </action>
 
 
         </group>

@@ -29,7 +29,7 @@ public class EdnToJson extends AbstractEdnJsonAction<Object> {
 
 
 	@Override
-	protected String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, Object additionalParam) {
+	public String transformSelection(Editor editor, Map<String, Object> actionContext, DataContext dataContext, String selectedText, Object additionalParam) {
 		return ednjson(selectedText);
 
 	}
